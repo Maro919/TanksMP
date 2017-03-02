@@ -1,0 +1,17 @@
+{
+  "name": "tanks-mp",
+  "version": "0.1.0",
+  "description": "A multiplayer game.",
+  "main": "app.js",
+  "dependencies": {
+    "websocket": "^1.0.24",
+    "express": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Iwo Plaza <gobbobpl@gmail.com> (http://gobbob.net)",
+  "license": "ISC"
+}

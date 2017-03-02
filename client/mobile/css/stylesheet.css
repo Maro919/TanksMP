@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #a0a0a0;
+}
+#login {
+    width: 100%;
+}
+#game {
+    width: 100%;
+    text-align: center;
+}
+#left_arrow, #right_arrow, #shoot_button {
+    height: 500px;
+    width: 33%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#left_arrow {
+     background-color: #0ff;
+}
+#right_arrow {
+    background-color: #ff0;
+}
+#shoot_button {
+    background-color: #fff;
+}

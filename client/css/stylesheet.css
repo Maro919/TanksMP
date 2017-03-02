@@ -1,0 +1,13 @@
+body {
+    background-color: #a0a0a0;
+}
+#login {
+    width: 100%;
+}
+#game {
+    width: 100%;
+    text-align: center;
+}
+canvas {
+    background-color: #fff;
+}
