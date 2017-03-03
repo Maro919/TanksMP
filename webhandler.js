@@ -15,9 +15,11 @@ module.exports = {
             res.sendFile(__dirname + '/client/play/play.html');
         });
         expressApp.use('/client', express.static(__dirname + '/client'));
-
-        HTTPServer.listen(8080, function() {
-            console.log((new Date()) + ' Server is listening on port 8080');
+        
+        var port = process.env.PORT || 8080;
+        
+        HTTPServer.listen(port, function() {
+            console.log((new Date()) + ' Server is listening on port ' + port);
         });
 
         module.exports.server = new WebSocketServer({
