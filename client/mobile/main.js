@@ -59,7 +59,7 @@ function sendUserAction(action) {
 }
 
 window.addEventListener("load", function() {
-    socketMain = new WebSocket("ws://192.168.43.74:8080", "connect");
+    socketMain = new WebSocket("ws://tanksmp.herokuapp.com", "connect");
 
     socketMain.onopen = function (event) {
         main();
