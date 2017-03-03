@@ -49,7 +49,7 @@ function main() {
 
 function tick() {
     for(var i = 0; i < Player.list.length; i++) Player.list[i].update();
-    for(var i = 0; i < Bullet.list.length; i++) Bullet.list[i].update();
+    //for(var i = 0; i < Bullet.list.length; i++) Bullet.list[i].update();
 }
 
 function sendPlayerData(){
