@@ -4,7 +4,7 @@ var Player = require('./player').Player;
 WebHandler.startServer(main);
 
 function main() {
-    setInterval(tick, 1000/30);
+    setInterval(tick, 250);
     
     WebHandler.server.on('request', function(request) {
         var connection = request.accept('connect', request.origin);
