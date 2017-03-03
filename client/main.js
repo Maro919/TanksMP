@@ -4,7 +4,7 @@ var left = false;
 var right = false;
 var shoot = false;
 
-var tanks;
+var tanks = {};
 
 var name;
 
@@ -47,9 +47,9 @@ function update(object) {
     object.x += Math.sin(object.rot*Math.PI/180)*object.speed;        
     object.y -= Math.cos(object.rot*Math.PI/180)*object.speed;        
 }
-function display(list){
+function display(){
     ctx2d.clearRect(0, 0, canvas.width, canvas.height);
-    ctx2d.translate(-list[name].x+canvas.width/2, -list[name].y+canvas.height/2);
+    ctx2d.translate(-tanks[name].x+canvas.width/2, -tanks[name].y+canvas.height/2);
     //ctx2d.clearRect(0, 0, canvas.width, canvas.height);
     
     for (var key in tanks){
