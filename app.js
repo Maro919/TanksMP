@@ -4,8 +4,9 @@ var Player = require('./player').Player;
 WebHandler.startServer(main);
 
 function main() {
-    setInterval(tick, 250);
-    
+    setInterval(sendPlayerData, 250);
+    setInterval(tick, 1000/30);
+        
     WebHandler.server.on('request', function(request) {
         var connection = request.accept('connect', request.origin);
         console.log('Connection from ' + request.origin + ' accepted.');
@@ -47,12 +48,11 @@ function main() {
 }
 
 function tick() {
-    sendPlayerData();
-    
+    for(var i = 0; i < Player.list.length; i++) Player.list[i].update();
+    for(var i = 0; i < Bullet.list.length; i++) Bullet.list[i].update();
 }
 
 function sendPlayerData(){
-    for(var i = 0; i < Player.list.length; i++) Player.list[i].update();
     var package = {
         type: "playerData",
         playerData: {}
@@ -74,7 +74,6 @@ function sendPlayerData(){
 }
 
 function sendBulletData(){
-    for(var i = 0; i < Bullet.list.length; i++) Bullet.list[i].update();
     var package = {
         type: "playerData",
         playerData: {}
