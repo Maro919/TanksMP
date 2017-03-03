@@ -63,7 +63,8 @@ function sendPlayerData(){
         package.playerData[player.name] = {
             x: player.x,
             y: player.y,
-            rot: player.rot
+            rot: player.rot,
+            speed: player.speed
         };
     }
     
