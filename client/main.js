@@ -4,7 +4,7 @@ var left = false;
 var right = false;
 var shoot = false;
 
-var tanks = {};
+var tanks;
 
 var name;
 
@@ -34,8 +34,7 @@ function main() {
                 console.log('Logged in!');
                 break;
             case 'playerData':
-                display(data.playerData);
-                tanks = data.playerData;
+                loadData(data.playerData);
                 break;
         }
     });
@@ -43,6 +42,11 @@ function main() {
     ctx2d = canvas.getContext("2d");
     
 }
+
+function loadData(object){
+    tanks = object;
+}
+
 function update(object) {
     object.x += Math.sin(object.rot*Math.PI/180)*object.speed;        
     object.y -= Math.cos(object.rot*Math.PI/180)*object.speed;        
